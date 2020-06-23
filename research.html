@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sarasij</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #222;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px 14px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<div class="topnav">
+	<a href="index.html">Home</a>
+	<a href="CV.pdf" target = "_blank">Vitae</a>
+	<a class="active" href="research.html">Research</a>
+	<a href="teaching.html">Teaching</a>
+	<!--<a href="link.html">Links</a>-->
+	<a href="contact.html">Contact</a>
+</div>
+<body background="img.png">
+
+<div>
+   <div style="margin:20px">
+<h3 style="color:brown"><b><u>Research Interests</u></b></h3>
+<p> My research interests lie in Commutative Algebra. I study commutative rings which are Noetherian. Most of my recent efforts are directed towards 
+developing a tool for approaching Berger's Conjecture which deals with the torsion of the module of K&aumlhler differentials. I am equally invested in finding more tools to attack 
+Lech's conjecture dealing with 
+multiplicity of flat couples of rings. I am also interested in Homological Algebra methods, 
+specifically Local Cohomology questions.</font>  </p>
+
+
+<p><h3 style="color:brown"><b><u>Publications and Preprints</u></b></h3></p>
+<script>
+function myFunction(divId) {
+  var x = document.getElementById(divId);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+	<li type="circle" style="margin-left:20px">
+	<il><i>Partial Trace Ideals and Berger's Conjecture</i> (Submitted) <br><a href="https://arxiv.org/abs/2003.11648" target="_blank">arXiv version</a></br></il>	
+	<button onclick="myFunction('abstract_h(Omega)')">Abstract</button><p align="justify">
+	<div id="abstract_h(Omega)" style="display: none;">
+Let R be a commutative one-dimensional domain whose integral closure is a DVR. We assume further that R is a complete k-algebra where k is any perfect field. Under this hypothesis, there is a long standing conjecture of R.W. Berger which states that R is regular if and only if the (universally finite) differential module is torsionfree. We introduce an invariant of the module of differentials based on a partial trace ideal, and discuss lower bounds on it which give new cases of this conjecture. In particular, we can generalize the quasihomogeneous case proved by Scheja. Finally, we explore some relations between this invariant and the colength of the conductor. 
+	</div>
+	</p>
+	</li>
+
+
+<p><h3 style="color:brown"><b><u><a href="Talks.html">Talks</a></u></b></p>
+</div>
+</body>
+</html>
