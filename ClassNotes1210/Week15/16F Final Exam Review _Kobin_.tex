@@ -1,0 +1,571 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{enumerate}
+\usepackage{xfrac}
+%\usepackage{graphicx} % for graphics
+%\usepackage{placeins} % for float placement
+%\usepackage{accents} % use if Aball and Bball are defined below
+%\usepackage{subfig} % for subfloats
+\usepackage{tikz} % for tikz pictures
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots} % for graphing functions in tikz
+%\usetikzlibrary{decorations.markings} % use for arrows in tikz
+\usetikzlibrary{3d,calc} %3d plotting in tikz
+%\usepackage{pifont}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{framed}
+
+
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\P}{\mathcal{P}}
+\newcommand{\im}{\ensuremath{\operatorname{Im}}}
+\newcommand{\cis}{\ensuremath{\operatorname{cis}}}
+\newcommand{\tr}{\ensuremath{\operatorname{tr}}}
+\renewcommand{\S}{\mathcal{S}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\proj}{\ensuremath{\operatorname{proj}}}
+\newcommand{\Null}{\ensuremath{\operatorname{Null}}}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\Span}{\ensuremath{\operatorname{Span}}}
+\newcommand{\rank}{\ensuremath{\operatorname{rank}}}
+\newcommand{\Col}{\ensuremath{\operatorname{Col}}}
+\newcommand{\Row}{\ensuremath{\operatorname{Row}}}
+
+
+\newcommand{\ds}{\displaystyle}
+
+
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{prop}[2][Proposition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{ex}[2][Example]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\newtheorem*{claim}{Claim}
+\newtheorem*{defn}{Definition}
+\newtheorem*{ivt}{Intermediate Value Theorem}
+
+
+%  useful script for putting extra space between in between mathmode lines  %
+\newcommand{\bg}{\begingroup\addtolength{\jot}{1em}}
+\newcommand{\eg}{\endgroup}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+\allowdisplaybreaks
+
+
+\begin{document}
+
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+
+
+\lhead{MATH 1210}
+\chead{Final Exam Review Problems}
+
+
+\begin{problem}{1}
+Suppose $f(x)$ is positive and {\it increasing} on the interval $[a,b]$. Which of the following statements is true about Riemann approximations of $\int_{a}^{b}\! f(x)\, dx$? 
+\begin{enumerate}[(a)]
+  \item The left-endpoint approximation $L_{4}$ is an over-approximation of the integral. 
+  \item The left-endpoint approximation $L_{4}$ is an under-approximation of the integral. 
+  \item The right-endpoint approximation $R_{4}$ is an over-approximation of the integral. 
+  \item Both (b) and (c). 
+  \item None of the above -- we do not have enough information. 
+\end{enumerate}
+\end{problem}
+
+\vspace{1in}
+
+\begin{problem}{2}
+What is the value of the following definite integral?: 
+$$
+\int_{1}^{4}\! x\sqrt{x^{2} - 1}\, dx. 
+$$
+\begin{center}
+  (a) $\ds\frac{64}{3}$ \qquad
+  (b) $\ds\frac{4}{3}\cdot 15^{3/2}$ \qquad
+  (c) $\ds\frac{1}{3}\cdot 15^{3/2}$ \qquad
+  (d) $\ds\frac{128}{3}$ \qquad
+  (e) We cannot solve this integral. 
+\end{center}
+\end{problem}
+
+\vspace{3in}
+
+\begin{problem}{3}
+Is the following $u/du$ substitution TRUE or FALSE: 
+$$
+\int_{1}^{4}\! x\sqrt{x^{2} - 1}\, dx = \int_{1}^{4}\! u^{1/2}\, \frac{du}{2}. 
+$$
+\end{problem}
+
+\newpage
+
+\begin{problem}{4}
+TRUE or FALSE: The fundamental theorem of calculus says that for any continuous function $f(x)$ on $[a,b]$, 
+$$
+\int_{a}^{b}\! f(x)\, dx = F(b) - F(a)
+$$
+where $F(x)$ is any antiderivative of $f(x)$ on the interval. 
+\end{problem}
+
+\vspace{1in}
+
+\begin{problem}{5}
+Which of the following rules for antidifferentiation is {\it invalid}? 
+\begin{enumerate}[(a)]
+  \item For any $n\not = -1$, $\ds\int\! x^{n}\, dx = \frac{x^{n + 1}}{n + 1} + c$. 
+  \item $\ds\int\! \ln x\, dx = \frac{1}{x} + c$. 
+  \item $\ds\int\! e^{x}\, dx = e^{x} + c$. 
+  \item $\ds\int\! 0\, dx = c$. 
+  \item All of the above are valid. 
+\end{enumerate}
+\end{problem}
+
+\vspace{1in}
+
+\begin{problem}{6}
+Let $\ds I = \int_{a}^{b}\! f(x)\, dx$ be the definite integral of some function $f(x)$ over an interval $[a,b]$. Which of these characterizations of the definite integral is correct? 
+\begin{enumerate}[(a)]
+  \item $I$ is equal to the area between the graph of $f(x)$ and the $x$-axis on the interval $[a,b]$. 
+  \item $I$ is equal to $F(b) - F(a)$, where $F(x)$ is any antiderivative of $f(x)$ on the interval. 
+  \item $I$ is equal to the net change of any antiderivative of $f(x)$ on the interval. 
+  \item All of the above are correct. 
+  \item None of the above are correct. 
+\end{enumerate}
+\end{problem}
+
+\newpage
+
+\begin{problem}{7}
+(Spring 16, Problem 15) If the function $f$ has continuous derivative on the interval $[0,c]$, where $c$ is a positive constant, then $\ds\int_{0}^{c}\! f'(x)\, dx = $
+\begin{enumerate}[(a)]
+  \item $|f(c) - f(0)|$
+  \item $f(c) - f(0)$
+  \item $f(c)$
+  \item $f(x) + c$
+  \item $f''(c) - f''(0)$
+\end{enumerate}
+\end{problem}
+
+\vspace{1in}
+
+\begin{problem}{8}
+(Spring 16, Problem 16) Suppose $f$ is a function for which $\ds\int_{0}^{50}\! 3f(x)\, dx = 3$ and $\ds\int_{2}^{50}\! f(x)\, dx = -4$. What is $\ds\int_{0}^{2}\! f(x)\, dx$? 
+\begin{center}
+  (a) $-1$ \qquad
+  (b) $-3$ \qquad
+  (c) There is not enough information \qquad
+  (d) 7 \qquad
+  (e) 5
+\end{center}
+\end{problem}
+
+\vspace{2in}
+
+\begin{problem}{9}
+TRUE or FALSE: 
+$$
+\int\! x\ln x\, dx = \frac{x^{2}}{2}\cdot\frac{1}{x} + c. 
+$$
+\end{problem}
+
+\newpage
+
+\begin{problem}{10}
+TRUE or FALSE: For any functions $f(x)$ and $g(x)$, 
+$$
+\int\! f(x)g(x)\, dx = \left (\int\! f(x)\, dx\right )\left (\int\! g(x)\, dx\right ). 
+$$
+\end{problem}
+
+\vspace{1in}
+
+\begin{problem}{11}
+Let $f(x)$ be continuous on the interval $[a,b]$. Which of the following statements is correct? 
+\begin{enumerate}[(a)]
+  \item The net change of $f(x)$ on $[a,b]$ is $\ds\int_{a}^{b}\! f(x)\, dx$. 
+  \item The total change of $f(x)$ on $[a,b]$ is $\ds\int_{a}^{b}\! |f(x)|\, dx$. 
+  \item The net change of $f(x)$ on $[a,b]$ is $\ds\int_{a}^{b}\! f'(x)\, dx$. 
+  \item The total change of $f(x)$ on $[a,b]$ is $|f'(b) - f'(a)|$. 
+  \item None of the above. 
+\end{enumerate}
+\end{problem}
+
+\vspace{1in}
+
+\begin{problem}{12}
+The average value of the function $f(x) = 3$ over the interval $[0,10]$ is 
+\begin{center}
+  (a) 30 \quad
+  (b) $\ds\frac{10}{3}$ \quad
+  (c) $\ds\frac{1}{10}\int_{0}^{10}\! f'(x)\, dx$ \quad
+  (d) 3 \quad
+  (e) This function has no average value. 
+\end{center}
+\end{problem}
+
+\newpage
+
+\begin{problem}{13}
+Let $f(x) = \sqrt{x^{4} + 1}$. Then the definite integral $\ds\int_{1}^{10}\! f(x)\, dx$ is 
+\begin{enumerate}[(a)]
+  \item positive
+  \item negative
+  \item zero
+  \item sometimes positive and sometimes negative
+  \item undefined
+\end{enumerate}
+\end{problem}
+
+\vspace{1in}
+
+\begin{problem}{14}
+A sprinter practices by running back and forth in a straight line. Her velocity after $t$ seconds is given by $v(t)$. What does $\ds\int_{0}^{60}\! v(t)\, dt$ represent? 
+\begin{enumerate}[(a)]
+  \item The total distance the sprinter ran in 1 minute. 
+  \item The sprinter's average velocity over 1 minute. 
+  \item The sprinter's displacement after 1 minute. 
+  \item The change in the sprinter's velocity over 1 minute. 
+  \item Both (b) and (d). 
+\end{enumerate}
+\end{problem}
+
+\vspace{1in}
+
+\begin{problem}{15}
+What does $\ds\int_{0}^{60}\! |v(t)|\, dt$ represent? 
+\begin{enumerate}[(a)]
+  \item The total distance the sprinter ran in 1 minute. 
+  \item The sprinter's average velocity over 1 minute. 
+  \item The sprinter's displacement after 1 minute. 
+  \item The change in the sprinter's velocity over 1 minute. 
+  \item Both (b) and (d). 
+\end{enumerate}
+\end{problem}
+
+\newpage
+
+\begin{problem}{16}
+The definition of the indefinite integral of $f(x)$ is 
+\begin{enumerate}[(a)]
+  \item $\ds\int\! f(x)\, dx = F(x)$ where $f'(x) = F(x)$. 
+  \item $\ds\int\! f(x)\, dx = F(x)$ where $F'(x) = f(x)$. 
+  \item $\ds\int_{a}^{b}\! f(x)\, dx$ where $f(x)$ is continuous on $[a,b]$. 
+  \item $\ds\int\! f(x)\, dx = F(x) + c$ where $f'(x) = F(x)$. 
+  \item $\ds\int\! f(x)\, dx = F(x) + c$ where $F'(x) = f(x)$. 
+\end{enumerate}
+\end{problem}
+
+\vspace{1in}
+
+\begin{problem}{17}
+TRUE or FALSE: The definition of the definite integral of $f(x)$ over the interval $[a,b]$ is 
+$$
+\int_{a}^{b}\! f(x)\, dx = F(b) - F(a), 
+$$
+where $F(x)$ is any antiderivative of $f(x)$. 
+\end{problem}
+
+\vspace{1in}
+
+\begin{problem}{18}
+Let $f(x)$ be a continuous function. An antiderivative is 
+\begin{enumerate}[(a)]
+  \item $F(x) + c$
+  \item $f'(x) + c$
+  \item any function $F(x)$ such that $F'(x) = f(x)$
+  \item always of the form $F(x) + c$ where $F(x)$ is a known antiderivative
+  \item Both (c) and (d) are correct. 
+\end{enumerate}
+\end{problem}
+
+\newpage
+
+\begin{problem}{19}
+Which of the following statements about the function $f(x) = e^{x}$ is correct?
+\begin{enumerate}[(a)]
+  \item The domain of $f(x)$ is $(0,\infty)$. 
+  \item The range of $f(x)$ is $(-\infty,\infty)$. 
+  \item The derivative of $f(x)$ is concave up on $(-\infty,\infty)$. 
+  \item $f(x)$ has a horizontal asymptote. 
+  \item Both (c) and (d) are correct. 
+\end{enumerate}
+\end{problem}
+
+\vspace{.7in}
+
+\begin{problem}{20}
+TRUE or FALSE: For a continuous function $f(x)$ on $[a,b]$, if $f(c)$ is the absolute maximum of $f(x)$ on the interval $[a,b]$, then $f'(c) = 0$. 
+\end{problem}
+
+\vspace{.7in}
+
+\begin{problem}{21}
+TRUE or FALSE: If $f'(c) = 0$ and $c$ is in the domain of $f(x)$, then there must be a relative maximum or minimum at $x = c$. 
+\end{problem}
+
+\vspace{.7in}
+
+\begin{problem}{22}
+TRUE or FALSE: For any real number $x$, $e^{\ln x} = x$. 
+\end{problem}
+
+\vspace{.7in}
+
+\begin{problem}{23}
+Solve for $x$ in the following expression: $2\ln(x + 1) = \ln(2) + \ln(x + 1)$. 
+\begin{center}
+  (a) 2 \qquad
+  (b) 1 \qquad
+  (c) $-1$ \qquad
+  (d) 0 \qquad
+  (e) Both (b) and (c)
+\end{center}
+\end{problem}
+
+\newpage
+
+\begin{problem}{24}
+Let $f(x)$ be a function. Which of the following is correct? 
+\begin{enumerate}[(a)]
+  \item A critical point of $f(x)$ is a point $c$ in the domain of $f$ such that $f'(c) = 0$ or DNE. 
+  \item An inflection point of $f(x)$ is a point $c$ in the domain of $f$ such that $f''(c) = 0$ or DNE. 
+  \item An absolute minimum of $f(x)$ is a critical point $c$ such that $f$ is concave up at $c$. 
+  \item A critical point of $f(x)$ is a point $c$ in the domain of $f$ such that $f''(c) = 0$ or DNE. 
+  \item Both (a) and (b). 
+\end{enumerate}
+\end{problem}
+
+\vspace{.7in}
+
+\begin{problem}{25}
+Fill in the blank: A function $f(x)$ has an absolute maximum and an absolute minimum value on a closed interval $[a,b]$, provided $f(x)$ is \underline{\phantom{aaaaaaaaaa}} on $[a,b]$. 
+\begin{center}
+  (a) continuous \qquad
+  (b) differentiable \qquad
+  (c) continuously differentiable
+\end{center}
+\begin{center}
+  (d) differentiably continuous \qquad
+  (e) a polynomial
+\end{center}
+\end{problem}
+
+\vspace{.7in}
+
+\begin{problem}{26}
+Ten years ago, your uncle invested \$20,000 into a savings account with continuously compounding interest. The account now contains \$22,000. What is the interest rate on the account? 
+\begin{center}
+  (a) $\ds\ln\left (\frac{11}{10}\right )$ \qquad
+  (b) $\ds\ln\left (\frac{10}{11}\right )$ \qquad
+  (c) $\ds\frac{1}{10}\ln\left (\frac{11}{10}\right )$ \qquad
+  (d) $\ds\frac{1}{11}\ln\left (\frac{10}{11}\right )$ \qquad
+  (e) $10\ln\left (\frac{10}{11}\right )$
+\end{center}
+\end{problem}
+
+\newpage
+
+\begin{problem}{27}
+How many years from now will it take for your uncle to have \$40,000 in his account? 
+\begin{center}
+  (a) 10 \qquad
+  (b) $\ds\frac{10\ln(2)}{\ln(11/10)}$ \qquad
+  (c) $\ln(2)$ \qquad
+  (d) $\ds\frac{10\ln(2)}{\ln(11/10)} - 10$
+\end{center}
+\begin{center}
+  (e) He will never have \$40,000 in his account. \qquad\phantom{aaaaaaaaa}
+\end{center}
+\end{problem}
+
+\vspace{1.2in}
+
+\begin{problem}{28}
+Let $q(x) = \ln\sqrt{x}$. Then $q'(1) = $
+\begin{center}
+  (a) $\ds\frac{1}{2}$ \qquad
+  (b) 1 \qquad
+  (c) $-1$ \qquad
+  (d) $e$ \qquad
+  (e) $\ds\ln\left (\frac{1}{2}\right )$
+\end{center}
+\end{problem}
+
+\vspace{1.2in}
+
+\begin{problem}{29}
+Let $h(x) = x^{x}$. Then 
+\begin{enumerate}[(a)]
+  \item $h'(1) = 1$
+  \item $h'(e) = 0$
+  \item $h'(2) = \ln(16) - 4$
+  \item All three are correct. 
+  \item Only (b) and (c) are correct. 
+\end{enumerate}
+\end{problem}
+
+\newpage
+
+\begin{problem}{30}
+The maximum number of horizontal asymptotes a function can have is
+\begin{center}
+  (a) 1 \qquad
+  (b) 2 \qquad
+  (c) 3 \qquad
+  (d) no limit
+\end{center}
+\begin{center}
+  (e) There is no such thing as a horizontal asymptote. 
+\end{center}
+\end{problem}
+
+\vspace{.5in}
+
+\begin{problem}{31}
+The absolute maximum of $f(x) = x$ on the interval $[0,1]$ is
+\begin{center}
+  (a) 0 \qquad
+  (b) 1 \qquad
+  (c) $\ds\frac{1}{2}$ \qquad
+  (d) DNE \qquad
+  (e) equal to its average on $[0,1]$
+\end{center}
+\end{problem}
+
+\vspace{.5in}
+
+\begin{problem}{32}
+The absolute maximum of $f(x) = x$ on the interval $[0,1)$ is
+\begin{center}
+  (a) 0 \qquad
+  (b) 1 \qquad
+  (c) $\ds\frac{1}{2}$ \qquad
+  (d) DNE \qquad
+  (e) equal to its average on $[0,1]$
+\end{center}
+\end{problem}
+
+\vspace{.5in}
+
+\begin{problem}{33}
+(Spring 16, Problem 17) Which of the following functions has a vertical asymptote at $x = -1$ and a horizontal asymptote at $y = 2$? 
+\begin{enumerate}[(a)]
+  \item $a(x) = \ds\frac{2x^{2} + 1}{x^{2} - 1}$
+  \item $b(x) = \ln(2x + 2)$
+  \item $c(x) = e^{x - 1} + 2$
+  \item $d(x) = \ds\frac{2\sqrt{x + 1}}{x + 2}$
+  \item $e(x) = \ds\frac{2}{e^{x + 1} - 1}$
+\end{enumerate}
+\end{problem}
+
+\newpage
+
+\begin{problem}{34}
+(Spring 13, Problem 2) Let $f(x)$ be a function such that $f'(4) = 7$, and let $g(x) = f(x^{2})$. Then $g'(2) = $
+\begin{center}
+  (a) 7 \qquad
+  (b) 14 \qquad
+  (c) 21 \qquad
+  (d) 28 \qquad
+  (e) DNE
+\end{center}
+\end{problem}
+
+\vspace{.5in}
+
+\begin{problem}{35}
+A function $f(x)$ is differentiable at $x = a$ if
+\begin{enumerate}[(a)]
+  \item $\ds\frac{f(x) - f(a)}{x - a}$ exists. 
+  \item $\ds\frac{f(x) - f(a)}{x - a} = f(a)$. 
+  \item $\ds\lim_{x\rightarrow a} \frac{f(x) - f(a)}{x - a}$ exists. 
+  \item $\ds\lim_{x\rightarrow a} \frac{f(x) - f(a)}{x - a} = f(a)$. 
+  \item $f(x)$ is continuous at $x = a$. 
+\end{enumerate}
+\end{problem}
+
+\vspace{.5in}
+
+\begin{problem}{36}
+Consider the following statement: the function $f(x) = x^{3} + x^{2} + x + 2$ has a root on $[-2,0]$. 
+\begin{enumerate}[(a)]
+  \item The statement is false: $f(x) > 0$ on $[-2,0]$. 
+  \item The statement is true: $x = -1$ is a root. 
+  \item The statement is true: every cubic polynomial has a root. 
+  \item The statement is false: $f(x)$ is only guaranteed to have an absolute maximum and minimum on a closed interval. 
+  \item The statement is true: $f(x)$ is continuous, $f(-2) < 0$ and $f(0) > 0$ so the intermediate value theorem applies. 
+\end{enumerate}
+\end{problem}
+
+\newpage
+
+\begin{problem}{37}
+(Spring 13, Problem 8) Find and classify all relative extrema of $f(t) = \ds\frac{8}{t} + \frac{t^{2}}{2}$. 
+\begin{enumerate}[(a)]
+  \item $f(t)$ has a relative maximum at $t = 2$. 
+  \item $f(t)$ has a relative minimum at $t = 2$. 
+  \item $f(t)$ has a relative minimum at $t = 2$ and a relative maximum at $t = -2$. 
+  \item $f(t)$ has a relative maximum at $t = 2$ and a relative minimum at $t = -2$. 
+  \item $f(t)$ has a critical point at $t = 2$ but not a relative extremum. 
+\end{enumerate}
+\end{problem}
+
+\vspace{1in}
+
+\begin{problem}{38}
+(Spring 13, Problem 10c) $\ds\lim_{x\rightarrow 1} \frac{3x^{4}}{x^{5} + 3x} = $
+\begin{center}
+  (a) 3 \qquad
+  (b) 0 \qquad
+  (c) $\ds\frac{3}{4}$ \qquad
+  (d) 1 \qquad
+  (e) DNE
+\end{center}
+\end{problem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+
+\end{document}
