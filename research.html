@@ -20,15 +20,24 @@ body {
 .topnav {
   overflow: hidden;
   background-color: #222;
+position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .topnav a {
   float: left;
+  display: block;
   color: #f2f2f2;
   text-align: center;
   padding: 24px 34px;
   text-decoration: none;
   font-size: 18px;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
 }
 
 .topnav a:hover {
@@ -52,8 +61,8 @@ body {
 </div>
 <body background="img.png">
 
-<div>
-   <div style="margin:20px">
+<div class="main">
+   <div style="margin:50px">
 <h3 style="color:brown"><b><u>Research Interests</u></b></h3>
 <p> My research interests lie in Commutative Algebra. I study commutative rings which are Noetherian. My dissertation is directed towards 
 developing a tool for approaching Berger's Conjecture which deals with the torsion of the module of K&aumlhler differentials.</p>
@@ -83,23 +92,33 @@ function myFunction(divId) {
 }
 </script>
 
+<p><li type="circle" style="margin-left:20px">
+	<il><i>Valuations and Nonzero Torsions in Module of Differentials</i>, with <a href="https://iitd.irins.org/profile/213960" target=_"blank"> Vivek Mukundan</a> (Submitted)
 
-<li type="circle" style="margin-left:20px">
-	<il><i>Torsion in Differentials and Berger's Conjecture</i>, with <a href="https://math.virginia.edu/people/clh4xd/" target=_"blank">Craig Huneke</a> and <a href="https://iitd.irins.org/profile/213960" target=_"blank"> Vivek Mukundan </a>; Res Math Sci 8, 60 (2021)
-
-<br><a href="https://arxiv.org/abs/2201.13002" target="_blank">arXiv version</a></br></il>
+<!--<br><a href="https://arxiv.org/abs/2201.13002" target="_blank">arXiv version</a></br></il>
 <button onclick="myFunction('abstract_torsion')">Abstract</button><p align="justify">
 	<div id="abstract_torsion" style="display: none;">
 	 Let \((R,\mathfrak{m},k)\) be an equicharacteristic one-dimensional complete local domain over an algebraically closed field \(k\) of characteristic zero. R. Berger conjectured that \(R\) is regular if and only if the universally finite module of differentials \(\Omega_R\) is a torsion-free \(R\) module. We give new cases of this conjecture by extending works of G&uuml;ttes and Corti&ntilde;as, Geller and Weibel. This is obtained by constructing a new subring \(S\)  of \(\operatorname{Hom}_R(\mathfrak{m},\mathfrak{m})\) and constructing enough torsion in \(\Omega_S\), enabling us to pull back a nontrivial torsion to \(\Omega_R\).
-	</div>
+	</div>-->
 	</p>
 	</li>
 
-	<li type="circle" style="margin-left:20px">
+
+<p><li type="circle" style="margin-left:20px">
+	<il><i>Torsion in Differentials and Berger's Conjecture</i>, with <a href="https://math.virginia.edu/people/clh4xd/" target=_"blank">Craig Huneke</a> and <a href="https://iitd.irins.org/profile/213960" target=_"blank"> Vivek Mukundan</a>; Res Math Sci 8, 60 (2021); <a href="https://arxiv.org/abs/2201.13002" target="_blank">arXiv version</a></br></il>
+
+<!--<button onclick="myFunction('abstract_torsion')">Abstract</button><p align="justify">
+	<!--<div id="abstract_torsion" style="display: none;">
+	 Let \((R,\mathfrak{m},k)\) be an equicharacteristic one-dimensional complete local domain over an algebraically closed field \(k\) of characteristic zero. R. Berger conjectured that \(R\) is regular if and only if the universally finite module of differentials \(\Omega_R\) is a torsion-free \(R\) module. We give new cases of this conjecture by extending works of G&uuml;ttes and Corti&ntilde;as, Geller and Weibel. This is obtained by constructing a new subring \(S\)  of \(\operatorname{Hom}_R(\mathfrak{m},\mathfrak{m})\) and constructing enough torsion in \(\Omega_S\), enabling us to pull back a nontrivial torsion to \(\Omega_R\).
+	</div>-->
+	</p>
+	</li>
+
+<p>	<li type="circle" style="margin-left:20px">
 	<il><i>Traceable PRFs: Full Collusion Resistance and Active Security</i>, with <a href="https://www.cs.utexas.edu/~dwu4/" target=_"blank">D.
-Wu</a>; <b>PKC 2022</b>
-<br><a href="https://eprint.iacr.org/2021/1675" target="_blank">ePrint Archive</a></br></il>
-	<button onclick="myFunction('abstract_TPRF')">Abstract</button><p align="justify">
+Wu</a>; <b>PKC 2022</b>; <a href="https://eprint.iacr.org/2021/1675" target="_blank">ePrint Archive</a></il>
+	
+<!--<button onclick="myFunction('abstract_TPRF')">Abstract</button><p align="justify">
 	<div id="abstract_TPRF" style="display: none;">
 	 The main goal of traceable cryptography is to protect against
 unauthorized redistribution of cryptographic functionalities. Such schemes
@@ -126,39 +145,37 @@ PRF from standard lattice assumptions. Our traceable PRFs directly
 imply new lattice-based secret-key traitor tracing schemes that are CCA-
 secure and where tracing security holds against active adversaries that
 have access to the tracing oracle.
-	</div>
+	</div>-->
 	</p>
 	</li>
 
 
-	<li type="circle" style="margin-left:20px">
-	<il><i>RandomPoints Package for Macaulay2</i>, with <a href="https://sites.google.com/view/sankhaneelbisui/home" target=_"blank">Sankhaneel Bisui</a>,<a href="https://sites.google.com/view/thainguyenmath/home" target=_"blank"> Th&aacute;i Th&agrave;nh Ngu&ycirc;en</a>,<a href="http://www-personal.umich.edu/~zoeng/" target=_"blank"> Zhan Jiang</a> and <a href="https://www.math.utah.edu/~schwede/" target=_"blank"> Karl Schwede</a> (Submitted)
-	<br><a href="https://arxiv.org/abs/2101.09573" target="_blank">arXiv version</a></br></il>	
-	<button onclick="myFunction('abstract_M2')">Abstract</button><p align="justify">
+<p>	<li type="circle" style="margin-left:20px">
+	<il><i>RandomPoints Package for Macaulay2</i>, with <a href="https://sites.google.com/view/sankhaneelbisui/home" target=_"blank">Sankhaneel Bisui</a>,<a href="https://sites.google.com/view/thainguyenmath/home" target=_"blank"> Th&aacute;i Th&agrave;nh Ngu&ycirc;en</a>,<a href="http://www-personal.umich.edu/~zoeng/" target=_"blank"> Zhan Jiang</a> and <a href="https://www.math.utah.edu/~schwede/" target=_"blank"> Karl Schwede</a> (Submitted); <a href="https://arxiv.org/abs/2101.09573" target="_blank">arXiv version</a></br></il>	
+	<!--<button onclick="myFunction('abstract_M2')">Abstract</button><p align="justify">
 	<div id="abstract_M2" style="display: none;">
 	We present RandomPoints, a package in Macaulay2 designed mainly to identify rational and geometric points in a variety over a finite field. We provide tools to estimate the dimension of a variety. We also present methods to obtain non-vanishing minors of a given size in a given matrix, by evaluating the matrix at a point. 
-	</div>
+	</div>-->
 	</p>
 	</li>
 
-	<li type="circle" style="margin-left:20px">
+<p>	<li type="circle" style="margin-left:20px">
 	<il><i>On Reflexive and I-Ulrich Modules Over Curve
-	Singularities</i>, with <a href="http://people.ku.edu/~hdao/" target=_"blank">Hailong Dao</a> and <a href="https://people.ku.edu/~p646s694/" 		target=_"blank">Prashanth Sridhar</a>; to appear in Transactions of the American Mathematical Society
-	<br><a href="https://arxiv.org/abs/2101.02641" target="_blank">arXiv version</a></br></il>	
-	<button onclick="myFunction('abstract_Ref')">Abstract</button><p align="justify">
+	Singularities</i>, with <a href="http://people.ku.edu/~hdao/" target=_"blank">Hailong Dao</a> and <a href="https://people.ku.edu/~p646s694/" target=_"blank">Prashanth Sridhar</a>; to appear in Transactions of the American Mathematical Society; <a href="https://arxiv.org/abs/2101.02641" target="_blank">arXiv version</a></br></il>	
+	<!--<button onclick="myFunction('abstract_Ref')">Abstract</button><p align="justify">
 	<div id="abstract_Ref" style="display: none;">
 	We study reflexive modules over one dimensional Cohen-Macaulay rings. Our key technique exploits the concept of I-Ulrich modules.
-	</div>
+	</div>-->
 	</p>
 	</li>
 
-	<li type="circle" style="margin-left:20px">
+<p>	<li type="circle" style="margin-left:20px">
 	<il><i>Partial Trace Ideals and Berger's Conjecture</i>; Journal of
-	Algebra, 598: 1–23, 2022. <br><a href="https://arxiv.org/abs/2003.11648" target="_blank">arXiv version</a></br></il>	
-	<button onclick="myFunction('abstract_h(Omega)')">Abstract</button><p align="justify">
+	Algebra, 598: 1–23, 2022; <a href="https://arxiv.org/abs/2003.11648" target="_blank">arXiv version</a></br></il>	
+	<!--<button onclick="myFunction('abstract_h(Omega)')">Abstract</button><p align="justify">
 	<div id="abstract_h(Omega)" style="display: none;">
 Let R be a commutative one-dimensional domain whose integral closure is a DVR. We assume further that R is a complete k-algebra where k is any perfect field. Under this hypothesis, there is a long standing conjecture of R.W. Berger which states that R is regular if and only if the (universally finite) differential module is torsionfree. We introduce an invariant of the module of differentials based on a partial trace ideal, and discuss lower bounds on it which give new cases of this conjecture. In particular, we can generalize the quasihomogeneous case proved by Scheja. Finally, we explore some relations between this invariant and the colength of the conductor. 
-	</div>
+	</div>-->
 	</p>
 	</li>
 
@@ -170,7 +187,15 @@ Let R be a commutative one-dimensional domain whose integral closure is a DVR. W
 </il></p>
 
 <p><li type="Disc" style="margin-left:20px"> 
-<il> TBD (<!--a href="https://www.ams.org/meetings/sectional/2292_program_ss7.html#title" target="_blank"-->Special Session on Recent Developments in Commutative Algebra, Purdue University, March 2022)</a></il>
+<il> Traceable PRFs: Full Collusion Resistance and Active Security (<a href="https://pkc.iacr.org/2022/program.php" target="_blank"-->PKC, March 2022)</a> (<a href="https://www.youtube.com/watch?v=KlJMKFhTEfs" target="_blank">Video</a>)</il>
+</il>
+<!--<li type="circle" style="margin-left:40px">
+	<il><a href="https://www.youtube.com/watch?v=KlJMKFhTEfs" target="_blank">Video of Talk</a></il>
+	</li>-->
+</p>
+
+<p><li type="Disc" style="margin-left:20px"> 
+<il> Torsion in the Module of Differentials (<!--a href="https://www.ams.org/meetings/sectional/2292_program_ss7.html#title" target="_blank"-->Special Session on Recent Developments in Commutative Algebra, Purdue University, March 2022)</a></il>
 </il></p>
 
 <!--
@@ -186,18 +211,18 @@ Let R be a commutative one-dimensional domain whose integral closure is a DVR. W
 </il></p>
 
 <p><li type="Disc" style="margin-left:20px"> 
-<il> An Introduction to Gr&oumlbner Bases (joint talk with Stephanie Shand) (<!--a href="https://math.virginia.edu/seminars/gradsem/" target="_blank"-->Graduate Students Seminar, University of Virginia, April 2021)</a></il>
+<il> An Introduction to Gr&oumlbner Bases (joint talk with Stephanie Shand) (<!--a href="https://math.virginia.edu/seminars/gradsem/" target="_blank"-->Graduate Students Seminar, University of Virginia, April 2021)</a> (<a href="Grobner_Basis.pdf" target = "_blank">Slides</a>) </il>
 	<!--<li type="circle" style="margin-left:40px">
 	<il><a href="https://wvu.zoom.us/rec/share/yABXFJ8zNiKNxMCzS59wdMH2P2cyIcGLvRUb_jEH6zmDHAUASTZ1TXN92zC6HHQl.FgDRiQlVEYz0XjxR" target="_blank">Video of Talk</a>(Passcode: M^hf&&X3)</il>-->
-	</li>
+	<!--</li>
 	<li type="circle" style="margin-left:40px">
 	<il><a href="Grobner_Basis.pdf" target = "_blank">Slides</a></il>
 	</li>
-</il></p>
+</il>--></p>
 
 <p><li type="Disc" style="margin-left:20px"> 
-<il> Discussions on I-Ulrich Modules (<!--a href="https://mathematics.wvu.edu/files/d/469cbae5-55a7-421e-a745-f6fca0df9027/maitra.pdf" target="_blank"-->(Algebra Seminar, West Virginia University, Feb 2021)<!--/a--></il>
-	<li type="circle" style="margin-left:40px">
+<il> Discussions on I-Ulrich Modules (<!--a href="https://mathematics.wvu.edu/files/d/469cbae5-55a7-421e-a745-f6fca0df9027/maitra.pdf" target="_blank"-->(Algebra Seminar, West Virginia University, Feb 2021)<!--/a--> (<a href="IUlrichModuleshandout.pdf" target="_blank">Slides</a>)</il>
+	<!--<li type="circle" style="margin-left:40px">
 	<il><a href="https://wvu.zoom.us/rec/share/yABXFJ8zNiKNxMCzS59wdMH2P2cyIcGLvRUb_jEH6zmDHAUASTZ1TXN92zC6HHQl.FgDRiQlVEYz0XjxR" target="_blank">Video of Talk</a>(Passcode: M^hf&&X3)</il>
 	</li>
 	<li type="circle" style="margin-left:40px">
@@ -206,7 +231,7 @@ Let R be a commutative one-dimensional domain whose integral closure is a DVR. W
 	<li type="circle" style="margin-left:40px">
 	<il><a href="IUlrichModuleshandout.pdf" target="_blank">Handout Version</a></il>
 	</li>
-</il></p>
+</il>--></p>
 
 <p><li type="Disc" style="margin-left:20px">
 <il> Discussions on Berger's Conjecture (<!--a href="http://jointmathematicsmeetings.org/jmm"-->Joint Mathematics Meeting January, 2021)<!--/a--></il>
@@ -214,8 +239,8 @@ Let R be a commutative one-dimensional domain whose integral closure is a DVR. W
 
 
 <p><li type="Disc" style="margin-left:20px">
-<il> A Study of Colength in Dimension One (<!--a href="https://eloisagrifo.github.io/champ/index.html"-->Commutative and Homological Algebra Market Presentations (CHAMP), October 14, 2020)</a></il>
-	<li type="circle" style="margin-left:40px">
+<il> A Study of Colength in Dimension One (<!--a href="https://eloisagrifo.github.io/champ/index.html"-->Commutative and Homological Algebra Market Presentations (CHAMP), October 14, 2020)</a>, (<a href="https://www.youtube.com/watch?v=KKR8yrJyyJU&feature=youtu.be" target="_blank">Research Elevator Pitch</a>, <a href="https://youtu.be/_q55QaeT9nI" target="_blank">Video</a>) </il>
+	<!--<li type="circle" style="margin-left:40px">
 	<il><a href="https://www.youtube.com/watch?v=KKR8yrJyyJU&feature=youtu.be" target="_blank"> Research Elevator Pitch </a>
 	</li>
 	
@@ -223,17 +248,17 @@ Let R be a commutative one-dimensional domain whose integral closure is a DVR. W
 	<il><a href="https://youtu.be/_q55QaeT9nI" target="_blank">Video of Talk </a>
 	</li>
 
-</li></p>
+</li>--></p>
 
 <p><li type="Disc" style="margin-left:20px">
-<il> Poster: An Approach To Berger's Conjecture(<!--a href="https://web.math.princeton.edu/~takumim/eCARs/" target="_blank"-->Early Commutative Algebra Researchers (eCARs), June 27-28, 2020) </a></il>
-	<li type="circle" style="margin-left:40px">
+<il> Poster: An Approach To Berger's Conjecture (<!--a href="https://web.math.princeton.edu/~takumim/eCARs/" target="_blank"-->Early Commutative Algebra Researchers (eCARs), June 27-28, 2020)</a>; (<a href="https://web.math.princeton.edu/~takumim/eCARs/posters/maitra_poster.pdf" target = "_blank">Poster</a> (Also Available <a href="poster_SarasijM.pdf" target="_blank">Here</a>)</il>
+	<!--<li type="circle" style="margin-left:40px">
 	<il><a href="https://web.math.princeton.edu/~takumim/eCARs/posters/maitra_poster.pdf" target = "_blank"> Poster </a> (Also Available  			<a href="poster_SarasijM.pdf" target="_blank"> Here </a>)
 	</li>
 	<li type="circle" style="margin-left:40px">
 	<il><a href="ecarsPosterTalk.pdf" target = "_blank"> Slides </a> of the poster pitcher talk </li>
 	</il>	
-</li></p>
+</li>--></p>
 
 <p><li type="Disc" style="margin-left:20px">
 <il><a href="A Study of Colength-NMSUTalk.pdf" target="_blank">A Simple Study of Colength</a> (Summer 2020, New Mexico State University, Graduate Commutative Algebra Seminar)</il>	
@@ -241,17 +266,17 @@ Let R be a commutative one-dimensional domain whose integral closure is a DVR. W
 
 <p><li type="Disc" style="margin-left:20px"> 
 <il> An Approach to Berger's Conjecture (<!--a href="https://eloisagrifo.github.io/cvillezoom.html" target="_blank"-->A Zoom Special Session 
-On Commutative Algebra, March 2020)</a></il>
-	<li type="circle" style="margin-left:40px">
+On Commutative Algebra, March 2020)</a>, (<a href="SMaitra.mp4" target="_blank">Video</a>, <a href="An Approach To Berger's Conjecture_Handout_Version_Sarasij.pdf" target="_blank">Slides</a>)</il>
+	<!--<li type="circle" style="margin-left:40px">
 	<il><a href="SMaitra.mp4" target="_blank">Video of Talk</a></il>
 	</li>
-	<li type="circle" style="margin-left:40px">
+	<!--<li type="circle" style="margin-left:40px">
 	<il><a href="An Approach To Berger's Conjecture_Sarasij.pdf" target = "_blank">Slides</a></il>
 	</li>
 	<li type="circle" style="margin-left:40px">
-	<il><a href="An Approach To Berger's Conjecture_Handout_Version_Sarasij.pdf" target="_blank">Handout Version</a></il>
+	<il><a href="An Approach To Berger's Conjecture_Handout_Version_Sarasij.pdf" target="_blank">Slides</a></il>
 	</li>
-</il></p>
+</il>--></p>
 
 <p><h3 style="color:brown"><b><u>Software </u></b></h3></p>
 <p><li type="Disc" style="margin-left:20px">
